@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <Nice></Nice>
+    <Nice prop_from_app="this is a passed in prop"></Nice>
   </div>
 </template>
 

@@ -1,13 +1,39 @@
 <template>
-<div v-html="msg"></div>
+	<div>
+		<div v-html="msg"></div>
+		<button v-on:click="reverseString()">reverse message</button>
+		<input type="text" v-model="msg">
+		<br>
+		<div v-html="addHOneTag"></div>
+		prop from app
+		<br>
+		{{prop_from_app}}
+	</div>
 </template>
 
-<script>
+<script type="text/babel">
 	export default {
 		name: 'Nice',
+		props:{
+			prop_from_app:{
+				type: String,
+				default: "no prop from top"
+
+			}
+		},
 		data () {
 			return {
-				msg: '<h1>hello world</h1>'
+				msg: 'hello world'
+			}
+		},
+		methods:{
+			reverseString(){
+				this.msg = this.msg.split('').reverse().join('');
+			}
+		},
+		computed:{
+			addHOneTag:function(){
+				return "<h1>"+this.msg+"</h1>";
 			}
 		}
 	}

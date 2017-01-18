@@ -1,14 +1,4 @@
-<template>
-	<div>
-		<div v-html="msg"></div>
-		<button v-on:click="reverseString()">reverse message</button>
-		<input type="text" v-model="msg">
-		<br>
-		<div v-html="addHOneTag"></div>
-		prop from app
-		<br>
-		{{prop_from_app}}
-	</div>
+<template src="./nice.html">
 </template>
 
 <script type="text/babel">
@@ -40,8 +30,6 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-	h1 {
-		color: red;
-	}
+<style src="./nice.css">
+
 </style>

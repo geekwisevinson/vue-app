@@ -30,6 +30,6 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src="./nice.css">
+<style  src="./nice.css">
 
 </style>

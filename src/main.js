@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router';
-import Nice from 'components/Nice';
+import Nice from 'components/nice/Nice';
 import Hello from 'components/Hello';
 Vue.use(VueRouter);
 

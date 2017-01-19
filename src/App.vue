@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Nice from './components/Nice';
+import Nice from './components/nice/Nice';
 
 export default {
   name: 'app',

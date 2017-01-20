@@ -1,9 +1,14 @@
-<template src="./nice.html">
+<template src="./home.html">
 </template>
 
 <script type="text/babel">
+	import c_header from '../../shared/c_header/c_header';
+
 	export default {
-		name: 'Nice',
+		name: 'home',
+		components: {
+			c_header
+		},
 		props:{
 			prop_from_app:{
 				type: String,
@@ -13,7 +18,7 @@
 		},
 		data () {
 			return {
-				msg: 'hello world'
+				msg: 'home page'
 			}
 		},
 		methods:{
@@ -27,16 +32,13 @@
 			}
 		},
 		created: function (){
-			console.log('created ran');
-			this.$http.get('https://jsonplaceholder.typicode.com/users')
-				.then(users =>{
-					console.log(users.data)
-				});
+			console.log('created home');
+
 		}
 	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style  src="./nice.css">
+<style  src="./home.css">
 
 </style>

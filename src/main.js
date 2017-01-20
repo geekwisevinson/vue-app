@@ -1,27 +1,29 @@
-import Vue from 'vue'
-import App from './App'
+import Vue from 'vue';
+import App from './App';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 import Nice from 'components/nice/Nice';
-import Hello from 'components/Hello';
+import Home from 'components/pages/home/home';
+import Signup from 'components/pages/signup/signup';
+import Login from 'components/pages/login/login';
+
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 const router = new VueRouter({
   mode:'history',
   base: __dirname,
   routes:[
-    {path:'/', component: Nice},
-    {path:'/hello', component: Hello}
+    {path:'/nice', component: Nice},
+    {name: 'home', path:'/', component: Home},
+    {name: 'sign_up', path:'/sign_up', component: Signup},
+    {name: 'login', path:'/login', component: Login}
   ]
 });
 
 new Vue({
+  el: "#app",
   router,
-  template: `
-    <div id="app">
-        <ul>
-            <li > <router-link  to="/">Nice</router-link></li>
-            <li > <router-link  to="/hello">Hello</router-link></li>
-        </ul>
-        <router-view></router-view>
-    </div>`,
-}).$mount('#app');
+  render: h=>h(App)
+});
+

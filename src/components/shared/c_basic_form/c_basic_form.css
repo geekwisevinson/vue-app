@@ -1,0 +1,55 @@
+.c-basic-form .c-body{
+	background-color: #007dc6;
+	display: inline-block;
+	padding: 0px 50px 10px;
+	margin: 20px auto;
+	text-align: left;
+	border-radius: 4px;
+}
+
+.c-basic-form .title{
+	color:yellow ;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+
+}
+
+.c-basic-form input[type=text], select, input[type=checkbox] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: larger;
+}
+
+label{
+	font-size: 20px;
+	padding: 2px 8px;
+	margin-right: 2px;
+	color: #367c2b;
+	display: inline-block;
+	width: 30%;
+	text-align: left;
+	background-color: yellow;
+	border-radius: 4px;
+}
+
+input[type=submit]
+{
+	width: 100%;
+	background-color: #76c043;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: larger;
+}
+input[type=submit]:hover {
+	background-color: #367c2b;
+}

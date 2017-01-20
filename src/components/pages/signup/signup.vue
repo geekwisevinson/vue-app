@@ -1,9 +1,16 @@
-<template src="./nice.html">
+<template src="./signup.html">
 </template>
 
 <script type="text/babel">
+	import c_header from '../../shared/c_header/c_header';
+	import c_basic_form from '../../shared/c_basic_form/c_basic_form'
+
 	export default {
-		name: 'Nice',
+		name: 'signup',
+		components: {
+			c_header,
+			c_basic_form
+		},
 		props:{
 			prop_from_app:{
 				type: String,
@@ -13,7 +20,7 @@
 		},
 		data () {
 			return {
-				msg: 'hello world'
+				msg: 'signup page'
 			}
 		},
 		methods:{
@@ -27,16 +34,13 @@
 			}
 		},
 		created: function (){
-			console.log('created ran');
-			this.$http.get('https://jsonplaceholder.typicode.com/users')
-				.then(users =>{
-					console.log(users.data)
-				});
+			console.log('created signup');
+
 		}
 	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style  src="./nice.css">
+<style  src="./signup.css">
 
 </style>

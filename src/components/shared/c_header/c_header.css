@@ -1,0 +1,15 @@
+div{
+	color: purple;
+}
+
+.c-header .c-body{
+	height:100px;
+	background-color: #007dc6;
+	position: relative;
+	z-index: 200;
+}
+
+.c-header .title{
+	position: relative;
+	top: 30px;
+}

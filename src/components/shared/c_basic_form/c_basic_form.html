@@ -1,0 +1,12 @@
+<div class="c-basic-form">
+	<div class="c-body">
+		<form action="" method="">
+			<h2 class="title">{{title}}</h2>
+			<div v-for="item in form_items">
+				<label for="item.name" >{{item.name}}</label>
+				<input :type="item.type" name="one" font-size="50" :placeholder="item.name">
+			</div>
+			<input type="submit" v-on:click="submitForm"></input>
+		</form>
+	</div>
+</div>

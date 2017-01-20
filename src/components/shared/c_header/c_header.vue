@@ -1,19 +1,18 @@
-<template src="./nice.html">
+<template src="./c_header.html">
 </template>
 
 <script type="text/babel">
 	export default {
-		name: 'Nice',
+		name: 'c_header',
 		props:{
-			prop_from_app:{
+			title:{
 				type: String,
 				default: "no prop from top"
-
 			}
 		},
 		data () {
 			return {
-				msg: 'hello world'
+				msg: 'this is c_header'
 			}
 		},
 		methods:{
@@ -27,16 +26,13 @@
 			}
 		},
 		created: function (){
-			console.log('created ran');
-			this.$http.get('https://jsonplaceholder.typicode.com/users')
-				.then(users =>{
-					console.log(users.data)
-				});
+			console.log('created c_header');
+
 		}
 	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style  src="./nice.css">
+<style  src="./c_header.css">
 
 </style>

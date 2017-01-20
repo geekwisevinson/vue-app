@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <Nice prop_from_app="this is a passed in prop"></Nice>
+    <router-view></router-view>
+    <ul class="side-bar">
+
+      <li > <router-link  to="/">Home</router-link></li>
+      <li > <router-link  to="/sign_up">Sign Up</router-link></li>
+      <li > <router-link  to="/login">Login</router-link></li>
+      <li > <router-link  to="/nice">Nice</router-link></li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Nice from './components/nice/Nice';
 
 export default {
   name: 'app',
-  components: {
-    Nice
-  }
+
 }
 </script>
 
@@ -21,7 +25,23 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: -21px;
 }
+
+  .side-bar{
+    text-align: left;
+    position: absolute;
+    top:0;
+    padding-top: 120px;
+    width: 90px;
+    height: 100%;
+    list-style: none;
+    margin:0;
+    background-color: #78b9e7;
+    z-index: 100;
+  }
+
+  #app a{
+    color: #004c91;
+  }
 </style>
